@@ -9,7 +9,7 @@
 
 
 :root{
-    --bgcolor: #afafaf;
+    --bgcolor: #f1f1f1;
     --bdtest: 1px #000 solid;
 }
 ::-webkit-scrollbar{
@@ -28,6 +28,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 /*  */
 main{
@@ -37,9 +38,9 @@ main{
     align-items: center;
     justify-content: center;
     position: relative;
-    /* background-color: var(--bgcolor); */
     
-    background: linear-gradient(-45deg,#ff85b4, #83deff);
+    /* background: linear-gradient(-45deg,#ff85b4, #83deff); */
+    background-color: var(--bgcolor);
 
 }
 #bgphoto{
@@ -67,16 +68,17 @@ main{
     backdrop-filter: blur(5px);
     transition: .2s ease-in-out transform;
     box-shadow: 0 0 10px #ffffff2a;
+    /* box-shadow: 0 0 50px #ffffff; */
     
 }
 .item{
-    background-color: #ffffff79;
+    background-color: #ffffff9f;
     backdrop-filter: blur(0px);
     border-radius: 50px;
     border: 1px solid #ffffffe1;
-    box-shadow: 0 0 50px #ffffff;
+    /* box-shadow: 0 0 50px #ffffff; */
     
-    display: block;
+    display: inline-block;
     width: 100%;
     padding: 15px 18px;
     
@@ -86,21 +88,40 @@ main{
     transition: .2s ease-in-out scale;
 }
 
-a{
+.item>a, .item>a>span{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
     color: #000;
     font-family: "Modak", serif;
 }
 
 .item:hover{
     background-color: #ffffffe5;
-    --hoverbdcolor:#ff0000;
+    --hoverbdcolor:#000000;
     scale: 1.05;
     transform: rotate(-4deg);
     border-color: var(--hoverbdcolor);
     box-shadow: 0 0 10px var(--hoverbdcolor);
+        /* box-shadow: 0 0 50px #ffffff; */
+
 }
 
-.item-container:hover{
+/* .item-container:hover{
     transform: rotateY(-15deg) rotateZ(5deg) rotateX(10deg);
-    /* transform: skew(-5deg, -5deg) */
+} */
+@media screen and (max-height: 552px) {
+    .item{
+        font-size: 1.2rem;
+        padding: 8px 15px;
+    }
+}
+@media screen and (max-height: 356px) {
+    .item{
+        font-size: 1.2rem;
+        padding: 8px 15px;
+    }
+    /* .item-container{
+        flex-direction:unset;
+    } */
 }
