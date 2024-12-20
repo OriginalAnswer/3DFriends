@@ -68,7 +68,7 @@ main{
     backdrop-filter: blur(5px);
     transition: .2s ease-in-out transform;
     box-shadow: 0 0 10px #ffffff2a;
-    /* box-shadow: 0 0 50px #ffffff; */
+    box-shadow: 0 0 50px #ffffff;
     
 }
 .item{
@@ -118,10 +118,10 @@ main{
 }
 @media screen and (max-height: 356px) {
     .item{
-        font-size: 1.2rem;
-        padding: 8px 15px;
+        width: unset;
     }
-    /* .item-container{
+    .item-container{
         flex-direction:unset;
-    } */
+        flex-wrap: wrap;
+    }
 }
