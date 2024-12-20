@@ -1,0 +1,106 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+/* .modak-regular {
+    font-family: "Modak", serif;
+    font-weight: 400;
+    font-style: normal;
+  } */
+  
+
+
+:root{
+    --bgcolor: #afafaf;
+    --bdtest: 1px #000 solid;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+/*  */
+html{
+    width: 100vw;
+    /* height: 100%; */
+    height: 100vh;
+    /* height: 100svh; */
+}
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*  */
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* background-color: var(--bgcolor); */
+    
+    background: linear-gradient(-45deg,#ff85b4, #83deff);
+
+}
+#bgphoto{
+    width: 100%;
+    max-width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    filter: brightness(125%);
+}
+.item-container{
+    border: 1px solid #ffffff3a;
+    
+}
+
+.item-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 30px 60px;
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+    transition: .2s ease-in-out transform;
+    box-shadow: 0 0 10px #ffffff2a;
+    
+}
+.item{
+    background-color: #ffffff79;
+    backdrop-filter: blur(0px);
+    border-radius: 50px;
+    border: 1px solid #ffffffe1;
+    box-shadow: 0 0 50px #ffffff;
+    
+    display: block;
+    width: 100%;
+    padding: 15px 18px;
+    
+    text-align: center;
+    text-transform:uppercase;
+    font-size: 1.9rem;
+    transition: .2s ease-in-out scale;
+}
+
+a{
+    color: #000;
+    font-family: "Modak", serif;
+}
+
+.item:hover{
+    background-color: #ffffffe5;
+    --hoverbdcolor:#ff0000;
+    scale: 1.05;
+    transform: rotate(-4deg);
+    border-color: var(--hoverbdcolor);
+    box-shadow: 0 0 10px var(--hoverbdcolor);
+}
+
+.item-container:hover{
+    transform: rotateY(-15deg) rotateZ(5deg) rotateX(10deg);
+    /* transform: skew(-5deg, -5deg) */
+}
