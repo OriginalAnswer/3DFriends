@@ -51,6 +51,7 @@ main{
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     filter: brightness(190%);
+    z-index: 1;
 }
 
 .item-container{
@@ -67,7 +68,7 @@ main{
     border: 1px solid #ffffff3a;
     box-shadow: 0 0 10px #ffffff2a;
     box-shadow: inset 0 0 15px #ffffff;
-    
+    z-index: 100;
 }
 .item{
     backdrop-filter: blur(0px);
